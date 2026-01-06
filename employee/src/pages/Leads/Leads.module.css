@@ -1,0 +1,249 @@
+.page{
+  padding-bottom: 18px;
+}
+
+.searchWrap{
+  margin: 14px 18px 0;
+  background: #D9D9D9;
+  border-radius: 16px;
+  height: 44px;
+  display:flex;
+  align-items:center;
+  padding: 0 14px;
+  gap: 10px;
+}
+.search{
+  flex:1;
+  border:none;
+  outline:none;
+  background: transparent;
+  font-weight: 800;
+  font-size: 14px;
+  color: #222;
+}
+.search::placeholder{ color: #4b4b4b; font-weight: 800; }
+
+.searchIcon{ display:flex; align-items:center; justify-content:center; }
+
+.list{
+  padding: 14px 18px 0;
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+}
+
+.card{
+  position: relative;
+  background: #E9E9E9;
+  border-radius: 18px;
+  padding: 14px 14px;
+  overflow: hidden;
+}
+
+.strip{
+  position:absolute;
+  left:0;
+  top: 18px;
+  width: 4px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+.cardBody{ position:relative; }
+
+.topRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 12px;
+}
+
+.leadName{
+  font-weight: 900;
+  font-size: 15px;
+  color: #121212;
+}
+
+.leadEmail{
+  margin-top: 4px;
+  font-weight: 800;
+  font-size: 12px;
+  color: #6b6b6b;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.right{ display:flex; justify-content:flex-end; }
+
+.statusCircle{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 8px solid #F2C200;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: transparent;
+}
+
+.statusText{
+  font-weight: 900;
+  font-size: 12px;
+  color: #111;
+}
+
+.bottomRow{
+  margin-top: 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.dateRow{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+
+.dateText{
+  font-weight: 900;
+  font-size: 12px;
+  color: #4b5a77;
+}
+
+.actions{
+  display:flex;
+  gap: 10px;
+}
+
+.iconBtn{
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 0;
+}
+
+.empty{
+  padding: 30px 0;
+  text-align:center;
+  color: #6b6b6b;
+  font-weight: 800;
+}
+
+/* Popovers (menu-like, anchored to icon buttons) */
+.popover{
+  position: fixed;
+  z-index: 300;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+  padding: 12px;
+}
+
+.popover[data-kind="type"]{
+  width: 110px;
+  padding: 10px;
+}
+
+.popover[data-kind="schedule"],
+.popover[data-kind="status"]{
+  width: 190px;
+  padding: 12px;
+}
+
+.popInner{
+  display: flex;
+  flex-direction: column;
+}
+
+.popTitle{
+  font-weight: 900;
+  font-size: 13px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.typeBtn{
+  border: none;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  text-align:left;
+  width: 100%;
+}
+.typeHot{ background: #FF7A00; color: #111; }
+.typeWarm{ background: #F2C200; color: #111; }
+.typeCold{ background: #6FE7F1; color: #111; }
+
+.field{
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.16);
+  padding: 0 10px;
+  font-weight: 900;
+  font-size: 13px;
+  outline:none;
+}
+
+.saveBtn{
+  margin-top: 12px;
+  border: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-weight: 900;
+  height: 38px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.statusHeader{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.tipWrap{ position: relative; margin-left: auto; }
+
+.infoBtn{
+  border:none;
+  background: transparent;
+  padding: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tooltip{
+  position:absolute;
+  left: 22px;
+  top: -6px;
+  transform: translateY(-100%);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 200px;
+  font-weight: 900;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.select{
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.16);
+  padding: 0 10px;
+  font-weight: 900;
+  font-size: 13px;
+  outline:none;
+}

@@ -1,0 +1,63 @@
+.shell{
+  display:flex;
+  flex-direction:column;
+}
+
+.content{
+  flex:1;
+  overflow:auto;
+  /* Hide scrollbar by default (still scrollable) */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome / Edge / Safari - hide by default */
+.content::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
+
+/* Show scrollbar only on hover */
+.content:hover{
+  scrollbar-width: thin; /* Firefox */
+}
+
+.content:hover::-webkit-scrollbar{
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.28);
+  border-radius: 999px;
+}
+
+.content::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.nav{
+  height: 86px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding: 8px 12px 12px;
+}
+
+.navItem, .navItemActive{
+  width: 74px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 6px;
+  font-weight:800;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.navItemActive{
+  color: var(--blue);
+}
+
+.navText{ line-height:1; }

@@ -1,0 +1,17 @@
+{
+  "name": "canova-crm",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix admin install && npm --prefix employee install",
+    "seed": "npm --prefix server run seed",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix admin run dev\" \"npm --prefix employee run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "dev:employee": "npm --prefix employee run dev",
+    "build": "npm --prefix admin run build && npm --prefix employee run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

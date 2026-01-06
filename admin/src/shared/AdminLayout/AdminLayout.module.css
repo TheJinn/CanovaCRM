@@ -1,0 +1,46 @@
+.shell{
+  height:100vh;
+  display:flex;
+}
+
+.sidebar{
+  width: 300px;
+  background: var(--sidebar-bg);
+  padding: 28px 20px;
+  display:flex;
+  flex-direction:column;
+}
+
+.logo{
+  font-weight:700;
+  font-size:28px;
+  letter-spacing:0.3px;
+  margin-bottom: 28px;
+}
+.logoCanova{ color:#0b0b0b; }
+.logoCRM{ color: var(--primary); }
+
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+}
+
+.navItem, .navItemActive{
+  display:block;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight:700;
+  color:#0b0b0b;
+}
+
+.navItemActive{
+  background:#a9a9a9;
+}
+
+.main{
+  flex:1;
+  /* Pages implement their own spacing to match the design */
+  padding: 0;
+  overflow:auto;
+}

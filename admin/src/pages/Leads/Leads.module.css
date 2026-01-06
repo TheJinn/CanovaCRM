@@ -1,0 +1,364 @@
+.page{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+}
+
+/* Top search bar (same placement as dashboard design) */
+.headerBar{
+  background:#fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 18px 22px;
+}
+.searchWrap{
+  position:relative;
+  width: 520px;
+  max-width: 70vw;
+}
+.searchIcon{
+  position:absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+.search{
+  width: 100%;
+  height: 50px;
+  border-radius: 18px;
+  border: none;
+  outline:none;
+  padding: 0 16px 0 50px;
+  background: #ededed;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+/* Breadcrumbs row + actions */
+.topRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 0 22px;
+}
+
+.breadcrumbs{ font-size: 16px; font-weight: 700; }
+.bcMuted{ color: var(--muted); }
+.bcSep{ margin: 0 10px; color: var(--muted); }
+.bcBold{ color: var(--text); }
+
+.actions{ display:flex; gap: 14px; }
+.actionBtn{
+  height: 46px;
+  min-width: 160px;
+  border-radius: 16px;
+  border: none;
+  background: #cfcfcf;
+  color: #4a4a4a;
+  font-weight: 800;
+  cursor:pointer;
+}
+
+/* Table card */
+.tableCard{
+  margin: 0 22px 18px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.20);
+  border-radius: 18px;
+  padding: 12px 14px;
+  display:flex;
+  flex-direction:column;
+  height: calc(100vh - 210px);
+  min-height: 640px;
+}
+
+.tableHead{
+  display:grid;
+  /* Fit inside the card without horizontal overflow */
+  grid-template-columns:
+    48px      /* No. */
+    1.15fr    /* Name */
+    1.55fr    /* Email */
+    0.95fr    /* Source */
+    0.95fr    /* Date */
+    1.05fr    /* Location */
+    0.95fr    /* Language */
+    1.05fr    /* Assigned To */
+    0.85fr    /* Status */
+    0.75fr    /* Type */
+    1.05fr;   /* Scheduled Date */
+  gap: 8px;
+  padding: 12px 10px;
+  color: #5c5c5c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Allow grid cells to shrink (prevents headings/content from pushing outside the window) */
+.tableHead > div,
+.row > div{
+  min-width: 0;
+}
+
+.tableHead > div{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tableBody{
+  flex: 1;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding: 6px 10px 10px;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:
+    48px
+    1.15fr
+    1.55fr
+    0.95fr
+    0.95fr
+    1.05fr
+    0.95fr
+    1.05fr
+    0.85fr
+    0.75fr
+    1.05fr;
+  gap: 8px;
+  align-items:center;
+  padding: 12px 10px;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 14px;
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.cellNo{ font-weight: 800; }
+.cell{ font-weight: 700; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.cellStrong{ font-weight: 800; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.cellMuted{
+  font-weight: 700;
+  color: var(--muted);
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.statusPill{
+  display:inline-block;
+  padding: 6px 10px;
+  background: #fff;
+  font-weight: 800;
+  max-width: 100%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* Pagination: prev left, numbers center, next right */
+.pagerRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 6px 4px 0;
+}
+
+.pPrev, .pNext{
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.22);
+  background: #fff;
+  font-weight: 800;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.pPrev:disabled, .pNext:disabled{ opacity: 0.55; cursor:not-allowed; }
+
+.pNums{ display:flex; align-items:center; gap: 10px; }
+.pNum, .pNumActive{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor:pointer;
+  font-weight: 800;
+  background: transparent;
+  color: #3a3a3a;
+}
+.pNumActive{
+  background: #f0f0f0;
+}
+.ellipsis{ color: #707070; font-weight: 800; padding: 0 6px; }
+.pArrow{ font-size: 18px; }
+
+/* Modal shared */
+.modalBack{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.12);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 18px;
+  z-index: 50;
+}
+.modal{
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  padding: 20px;
+}
+.modalTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.modalTitle{ font-size: 20px; font-weight: 900; }
+.modalSub{ margin-top: 4px; color: var(--muted); font-weight: 700; font-size: 14px; }
+.x{
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor:pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* Add Lead modal */
+.formCol{ display:flex; flex-direction:column; gap: 14px; }
+.field{ display:flex; flex-direction:column; gap: 8px; }
+.label{ color: #555; font-weight: 700; }
+.input{
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.22);
+  padding: 0 14px;
+  font-weight: 700;
+  outline:none;
+}
+.err{ color: #b02222; font-weight: 800; }
+.saveWrap{ display:flex; justify-content:flex-start; margin-top: 8px; }
+.saveBtn{
+  width: 220px;
+  height: 54px;
+  border-radius: 14px;
+  border: none;
+  background: #cfcfcf;
+  color: #4a4a4a;
+  font-weight: 900;
+  cursor:pointer;
+}
+.saveBtn:disabled{ opacity: 0.7; cursor:not-allowed; }
+
+/* CSV modal */
+.drop{
+  border: 2px dashed rgba(0,0,0,0.35);
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.dropInner{ display:flex; flex-direction:column; align-items:center; gap: 12px; width: 100%; }
+.dropText{ font-weight: 800; color: #111; }
+.or{ color: var(--muted); font-weight: 700; }
+.browse{
+  height: 34px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: #fff;
+  font-weight: 800;
+  cursor:pointer;
+}
+
+.sampleRow{
+  width: 380px;
+  max-width: 100%;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.18);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0 12px;
+  margin-top: 6px;
+}
+.sampleName{ color: #8a8a8a; font-weight: 700; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.sampleDl{ display:flex; align-items:center; justify-content:center; }
+
+.ringWrap{ position:relative; }
+.ringText{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight: 900; font-size: 12px; color: #111; }
+
+.cancelSmall{
+  height: 34px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: #fff;
+  font-weight: 800;
+  cursor:pointer;
+}
+.msg{ color: var(--muted); font-weight: 800; }
+
+.modalActionsCsv{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: 12px;
+  margin-top: 14px;
+}
+.csvCancel{
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: #fff;
+  font-weight: 800;
+  cursor:pointer;
+  color: #6b6b6b;
+}
+.csvNext{
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  background: #cfcfcf;
+  font-weight: 900;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.csvNext:disabled{ opacity: 0.6; cursor:not-allowed; }
+.csvUpload{
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  background: #0b1b1f;
+  color: #fff;
+  font-weight: 900;
+  cursor:pointer;
+}
+.csvUpload:disabled{ opacity: 0.6; cursor:not-allowed; }
+
+@media (max-width: 1200px){
+  .tableHead, .row{
+    grid-template-columns: 54px 120px 160px 100px 100px 110px 100px 130px 100px 80px 120px;
+  }
+}

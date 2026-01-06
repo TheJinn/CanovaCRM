@@ -1,0 +1,79 @@
+.page{
+  padding: 0 0 16px;
+}
+
+.formWrap{
+  padding: 14px 18px 0;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.label{
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.55);
+}
+
+.input{
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.35);
+  padding: 0 12px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.input:disabled{
+  background: #f3f3f3;
+}
+
+.actions{
+  display:flex;
+  gap: 14px;
+  justify-content:center;
+  margin-top: 18px;
+}
+
+.primary{
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #2b5be7;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.logout{
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #e5392d;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.saved{
+  margin-top: 6px;
+  font-weight: 800;
+  color: #1b8a3c;
+}
+
+.err{
+  margin-top: 6px;
+  font-weight: 800;
+  color: #b02222;
+}

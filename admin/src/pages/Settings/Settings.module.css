@@ -1,0 +1,92 @@
+.page{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+}
+
+/* Breadcrumbs row */
+.topRow{
+  padding: 10px 22px;
+  margin-top: 25px;
+}
+.breadcrumbs{ font-size: 16px; font-weight: 700; }
+.bcMuted{ color: var(--muted); }
+.bcSep{ margin: 0 10px; color: var(--muted); }
+.bcBold{ color: var(--text); }
+
+/* Card */
+.card{
+  margin: 0 22px;
+  background:#fff;
+  border: 1px solid rgba(0,0,0,0.20);
+  border-radius: 18px;
+  padding: 18px 24px;
+  min-height: 620px;
+  position:relative;
+}
+
+/* Tab-like header */
+.tabHeader{
+  display:flex;
+  align-items:flex-end;
+  gap: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.22);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+.tabActive{
+  font-size: 16px;
+  font-weight: 800;
+  color: #5b5b5b;
+  padding-bottom: 8px;
+  border-bottom: 3px solid rgba(0,0,0,0.55);
+}
+.tabSpacer{ flex:1; }
+
+/* Form column (single vertical column like design) */
+.formCol{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  max-width: 540px;
+}
+
+.field{ display:flex; flex-direction:column; gap: 8px; }
+.label{
+  font-size: 16px;
+  font-weight: 700;
+  color: #6b6b6b;
+}
+.input{
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.45);
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  outline:none;
+  background: #fff;
+}
+.input:disabled{ background: #f3f3f3; }
+
+/* Messages */
+.saved{ color: var(--green); font-weight: 800; margin-top: 10px; }
+.err{ color: #b02222; font-weight: 800; margin-top: 10px; }
+
+/* Save button bottom-right like design */
+.actions{
+  position:absolute;
+  right: 24px;
+  bottom: 24px;
+}
+.primary{
+  height: 60px;
+  width: 200px;
+  border-radius: 18px;
+  border: none;
+  background: #d0d0d0;
+  color: #5a5a5a;
+  font-weight: 800;
+  cursor:pointer;
+}
+.primary:disabled{ opacity: 0.85; cursor: not-allowed; }

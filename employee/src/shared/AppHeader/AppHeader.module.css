@@ -1,0 +1,47 @@
+.wrap{
+  width: 100%;
+}
+
+.bg{
+  background: radial-gradient(circle at -15% -50%, rgba(255,255,255,0.18) 0 35%, transparent 36%),
+              radial-gradient(circle at 35% -40%, rgba(255,255,255,0.14) 0 28%, transparent 29%),
+              #2457DA;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  padding: 16px 18px 18px;
+}
+
+.brandRow{ display:flex; justify-content:flex-start; }
+.brand{
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+.brandCanova{ color: #ffffff; }
+.brandCRM{ color: #F2C200; }
+
+.titleRow{
+  margin-top: 10px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.backBtn{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.title{
+  color: #fff;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+}
+.children{ margin-top: 10px; }

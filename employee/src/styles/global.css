@@ -1,0 +1,67 @@
+:root{
+  --font: "REM", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --blue: #2c5ae5;
+  --blue2:#456de5;
+  --yellow: #f2d300;
+
+  --bg: #eef0f6;
+  --card: #ffffff;
+  --muted: #7a7a7a;
+  --text: #1b1b1b;
+
+  --hot: #ff8a00;
+  --warm: #f2d300;
+  --cold: #6bd6ff;
+
+  --green: #29b45a;
+  --red: #d64545;
+  --greyBox: #e0e0e0;
+  --soft: #d0d4df;
+}
+
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden; /* keep the mobile shell fixed inside viewport */
+}
+
+a{ color:inherit; text-decoration:none; }
+button, input, select{ font-family: var(--font); }
+
+#root{
+  height: 100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* mobile portrait shell */
+.appShell{
+  width: 100%;
+  max-width: 390px;
+  height: 100%;
+  max-height: 844px;
+  background: var(--bg);
+  overflow:hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* On small screens, the app must be full-bleed and never overflow */
+@media (max-width: 420px){
+  #root{ padding: 0; }
+  .appShell{
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+}

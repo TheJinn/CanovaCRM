@@ -1,0 +1,180 @@
+.page{
+  padding-bottom: 14px;
+}
+
+/* Blue header block under the fixed logo bar */
+.hero{
+  background: #2457DA;
+  color: #fff;
+  padding: 18px 18px 22px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+
+.greet{
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+  margin-top: 4px;
+  color: #fff;
+}
+
+.name{
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.timingsTitle{
+  padding: 14px 18px 0;
+  font-size: 14px;
+  font-weight: 900;
+  color: #111;
+}
+
+.cards{
+  padding: 12px 16px 0;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.timingCard{
+  background: #2C5AE5;
+  border-radius: 18px;
+  padding: 14px 14px;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.cardGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.cardColTitle{
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.cardColValue{
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 900;
+  opacity: 0.95;
+}
+
+.toggle{
+  width: 14px;
+  height: 52px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.65);
+  cursor:pointer;
+}
+.toggle:disabled{
+  opacity:0.55;
+  cursor:not-allowed;
+}
+.toggleIdle{ background: rgba(255,255,255,0.65); }
+.toggleOn{ background: #64D000; }
+.toggleOff{ background: #E02020; }
+
+/* Break history box under Break card */
+.breakHistoryWrap{
+  margin: 10px 16px 0;
+  border-radius: 18px;
+  background: #E9EDF5;
+  border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.breakTableHead{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #111;
+  background: rgba(255,255,255,0.35);
+}
+
+.breakTableBody{
+  max-height: 150px;
+  overflow:auto;
+}
+
+.breakRow{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.breakLabel{
+  font-size: 12px;
+  font-weight: 900;
+  color: #111;
+}
+
+.breakValue{
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #111;
+}
+
+.right{
+  text-align:right;
+}
+
+.sectionTitle{
+  padding: 16px 18px 8px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #111;
+}
+
+.activityBox{
+  margin: 0 16px;
+  background: #E6E6E6;
+  border-radius: 18px;
+  padding: 14px 14px;
+  height: 150px;
+  overflow:auto;
+}
+
+.actRow{
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+  padding: 8px 4px;
+}
+
+.bullet{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7a7a7a;
+  margin-top: 6px;
+  flex: 0 0 auto;
+}
+
+.actMsg{
+  font-size: 13px;
+  font-weight: 800;
+  color: #444;
+  line-height: 1.2;
+}
+
+.empty{
+  color: #666;
+  font-weight: 800;
+  padding: 12px;
+}
